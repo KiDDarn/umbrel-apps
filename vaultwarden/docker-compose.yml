@@ -1,0 +1,18 @@
+version: "3.7"
+
+services:
+  app_proxy:
+    environment:
+      APP_HOST: vaultwarden_server_1
+      APP_PORT: 8089
+      PROXY_AUTH_ADD: "false"
+
+  server:
+    image: vaultwarden/server:1.29.1@sha256:c2849f8189e4d425a9d80db0380566cc38577b289b9e6c88330e190e19af5a30
+    user: "1000:1000"
+    restart: on-failure
+    stop_grace_period: 1m
+    volumes:
+      - ${APP_DATA_DIR}/data:/data
+    environment:
+      ROCKET_PORT: 8089

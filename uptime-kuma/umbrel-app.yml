@@ -1,0 +1,93 @@
+manifestVersion: 1
+id: uptime-kuma
+category: networking
+name: Uptime Kuma
+version: "1.23.0"
+tagline: Self-hosted uptime monitoring tool
+description: >
+  Uptime Kuma is a self-hosted monitoring tool like Uptime Robot.
+
+
+  Features:
+
+
+  - Monitoring uptime for HTTP(s) / TCP / HTTP(s) Keyword / Ping / DNS Record / Push / Steam Game Server.
+
+  - Fancy, Reactive, Fast UI/UX.
+
+  - Notifications via Telegram, Discord, Gotify, Slack, Pushover, Email (SMTP), and 70+ notification services.
+
+  - 20 second intervals.
+
+  - Multi Languages
+
+  - Simple Status Page
+
+  - Ping Chart
+
+  - Certificate Info
+developer: Louis Lam
+website: https://uptime.kuma.pet
+dependencies: []
+repo: https://github.com/louislam/uptime-kuma
+support: https://github.com/louislam/uptime-kuma/issues
+port: 8385
+gallery:
+  - 1.jpg
+  - 2.jpg
+  - 3.jpg
+path: ""
+defaultPassword: ""
+releaseNotes: >
+  Updates Uptime Kuma from version 1.21.2 to 1.23.0.
+
+  🐻 It should be the last minor version of Uptime Kuma v1. I will focus on the development of v2. Stay tuned!
+
+  Update: The last minor version (1.23.x) means that there won't be any new features introduced in v1. However, bug fixes will still be provided. You can expect to see 1.23.1, 1.23.2 and so on.
+  
+
+  🆕 New Features:
+  
+  - Added an improved comprehensive monitor list filtering
+
+  - Added an ability to bulk select, pause & resume
+
+  - Added an ability to show certificate expiry on status pages
+
+  - Added Tailscale ping monitor
+
+  - Added badges for status page status
+   
+   
+  💇‍♀️ Improvements to Maintenance:
+
+  - Dropdown menu is no longer blocked by the save button bar
+
+  - Added an ability to configure a custom PushDeer server URL
+
+  - Added an ability to set TLS certs (Put ca.pem, key.pen and cert.pem in the data/docker-tls/your_hostname/)
+
+  - Strip trailing slashes to avoid 404 from Home Assistant's API endpoint
+
+  
+  🐛 Bug Fixes:
+  
+  - Fixed Redis authentication reattempt issue
+  
+  - Fixed notification toggle missing when import from backup
+
+  - Fixed the issue that IPv6 addresses could not be displayed in the log
+
+  - Avoid new timezones or non-existing timezones crash Uptime Kuma
+
+  - Fixed SMTP notification "Ignore TLS Error" option
+
+
+  ⬆️ Security Fixes
+
+  - Hardening: Avoid exposing the Uptime Kuma version to the public
+  
+  
+  Full changelog for versions 1.21.2 to 1.23.0 can be found here: https://github.com/louislam/uptime-kuma/releases
+submitter: Philipp Haussleiter
+submission: https://github.com/getumbrel/umbrel/pull/1148

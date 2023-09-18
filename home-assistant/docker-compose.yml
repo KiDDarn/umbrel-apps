@@ -1,0 +1,11 @@
+version: "3.7"
+
+services:
+  server:
+    image: homeassistant/home-assistant:2023.7.1@sha256:a86ff5d05ce46520c53d67c8da55aba310de9b9b4ca8eead1ae0b5ab1c068f97
+    network_mode: host
+    # UI at default port 8123
+    privileged: true
+    volumes:
+      - ${APP_DATA_DIR}/data:/config
+      - /dev:/dev
